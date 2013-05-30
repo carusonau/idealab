@@ -35,3 +35,9 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+# Ingnore any zend studio files
+.buildpath
+.project
+.settings/
+
