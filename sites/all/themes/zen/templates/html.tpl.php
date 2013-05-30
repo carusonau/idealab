@@ -76,11 +76,6 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 
 <head profile="<?php print $grddl_profile; ?>">
-  <?php
-  //  echo file_get_contents('http://idealab.nau.edu/includes/scripts_standard.aspx');
-
-    //<link rel="stylesheet" type="text/css" href="http://news.nau.edu/wp-content/themes/nau_development/app_files/css.css">
-  ?>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
@@ -113,13 +108,6 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  </div>
-  <div id="nau-footer-wrapper" style="width:100%; background-color: #f1f1f1;">
-  	<div style="margin:auto auto; width:1200px;">
-    <?php
-    echo file_get_contents("http://cmsassets.nau.edu/aggregator/nav.ashx?location=footer");
-    ?>
-    </div>
   </div>
 </body>
 </html>
