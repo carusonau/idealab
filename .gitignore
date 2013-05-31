@@ -41,3 +41,9 @@ xmlrpc.php
 .project
 .settings/
 
+# DS Store files
+# maybe should disable this file creation
+sites/all/themes/.DS_Store
+
+# SASS files
+sites/all/themes/nau/.sass-cache/
