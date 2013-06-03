@@ -24,7 +24,7 @@ h1, h2 {
 }
 
 #page-wrapper {
-	background-image:url('../images/idealab-banner-ripple.jpg');
+	background-image:url('/sites/all/themes/nau/images/idealab-banner-ripple.jpg');
 	background-repeat:repeat-x;
 	background-position: center 48px;
 }
