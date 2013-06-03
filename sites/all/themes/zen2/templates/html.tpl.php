@@ -89,10 +89,10 @@
   <?php print $styles; ?>
 
   <?
-  	// jcaruso edit 5/31/2013
- 	// Style added to override with nau styles
+  	// Style added to override with nau styles
   ?>
   <link type="text/css" href="/sites/all/themes/nau/css/nau.css" rel="Stylesheet" />
+
 
   <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>

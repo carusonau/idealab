@@ -71,68 +71,43 @@
 ?>
 
 <div id="page">
-	<header id="header" role="banner">
-		<div style="height:160px; width:240px; text-align:center;  float:left;
-				background-image:url('http://cmsassets.nau.edu/css/images/bar.png');
-				background-repeat: y-axis;
-			">
-		<a href="http://nau.edu" title="Northern Arizona University" rel="home" id="logo"><img src="http://cmsassets.nau.edu/images/naulogo.png" alt="Home" width="80"
-		style="padding:10px 86px;"/></a>
-		</div>
 
-		<?php if ($site_name || $site_slogan): ?>
-		      <hgroup id="name-and-slogan">
-		        <?php if ($site_name): ?>
-		          <h1 id="site-name">
-		            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-		          </h1>
-		        <?php endif; ?>
+  <header id="header" role="banner">
 
-		        <?php if ($site_slogan): ?>
-		          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-		        <?php endif; ?>
-		      </hgroup><!-- /#name-and-slogan -->
-		    <?php endif; ?>
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+    <?php endif; ?>
 
-		<div style="float:right;">
-	    	<?php if ($secondary_menu): ?>
-		      <nav id="secondary-menu" role="navigation">
-		        <?php print theme('links__system_secondary_menu', array(
-		          'links' => $secondary_menu,
-		          'attributes' => array(
-		            'class' => array('links', 'inline', 'clearfix'),
-		          ),
-		          'heading' => array(
-		            'text' => $secondary_menu_heading,
-		            'level' => 'h2',
-		            'class' => array('element-invisible'),
-		          ),
-		        )); ?>
-	      	  </nav>
-			<?php endif; ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup id="name-and-slogan">
+        <?php if ($site_name): ?>
+          <h1 id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+          </h1>
+        <?php endif; ?>
 
-			  <div role="search" id="nauSearch">
-			    <div id="searchOptions">
+        <?php if ($site_slogan): ?>
+          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+        <?php endif; ?>
+      </hgroup><!-- /#name-and-slogan -->
+    <?php endif; ?>
 
-			    	<input type="submit" class="nauSubmit" title="Search the site" value="" name="ctl00$ctl01$ctl03">
-			    	<input type="text" title="Enter search term..." placeholder="Enter search term..." class="nauSearchInput" id="ctl00_ctl01__query" name="ctl00$ctl01$_query">
+    <?php if ($secondary_menu): ?>
+      <nav id="secondary-menu" role="navigation">
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => $secondary_menu_heading,
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+      </nav>
+    <?php endif; ?>
 
-			        <label for="ctl00_ctl01__rbSite">Entire Site</label>
-			        <input type="radio" checked="checked" value="_rbSite" name="ctl00$ctl01$searchOptions" id="ctl00_ctl01__rbSite">
-
-			        <label for="ctl00_ctl01__rbDirectory">Directory</label>
-			        <input type="radio" value="_rbDirectory" name="ctl00$ctl01$searchOptions" id="ctl00_ctl01__rbDirectory">
-
-			        <label for="ctl00_ctl01__rbDegree">Degrees</label>
-			        <input type="radio" value="_rbDegree" name="ctl00$ctl01$searchOptions" id="ctl00_ctl01__rbDegree">
-
-
-			    </div>
-		      </div>
-		      <div style="clear:both;"></div>
-
-		</div>
-		<div style="clear:both;"></div>
     <?php print render($page['header']); ?>
 
   </header>
