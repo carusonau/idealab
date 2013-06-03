@@ -87,6 +87,13 @@
   <meta http-equiv="cleartype" content="on">
 
   <?php print $styles; ?>
+
+  <?
+  	// Style added to override with nau styles
+  ?>
+  <link type="text/css" href="/sites/all/themes/nau/css/nau.css" rel="Stylesheet" />
+
+
   <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
@@ -99,6 +106,7 @@
   <?php endif; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
+<h1>fOOOOOO</h1>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
     <p id="skip-link">
       <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
