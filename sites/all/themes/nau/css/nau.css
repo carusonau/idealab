@@ -3,6 +3,8 @@
 body {
 	background-color: #FDFAF5;
 	color: #3E3E3E;
+	font-size: .7em;
+	line-height: 1.4em;
 }
 a {
 	color: #2E2E2E;
@@ -24,9 +26,13 @@ h1, h2 {
 }
 
 #page-wrapper {
-	background-image:url('/sites/all/themes/nau/images/idealab-banner-ripple.jpg');
+	background-image:url('/sites/all/themes/nau/images/idealab-banner-ripple2.jpg');
 	background-repeat:repeat-x;
 	background-position: center 48px;
+}
+#page {
+	background-image:url('http://cmsassets.nau.edu/css/images/bar.png');
+	background-repeat:repeat-y;
 }
 
 
@@ -125,14 +131,16 @@ section.region-sidebar-second div.block h2 {
 
 #name-and-slogan {
 	float:left;
-	margin-top:76px;
-	margin-left: 30px;
-
-
+	margin-top:58px;
+	margin-left: 36px;
+}
+#logo img{
+	width: 130px;
+	padding: 8px 50px 0px 62px;
 }
 #site-name a{
 	color: #fff !important;
-	font-size: 22px;
+	font-size: 24px;
 	font-family:  Arial,sans-serif;
 }
 #site-name a:visited{
@@ -140,16 +148,39 @@ section.region-sidebar-second div.block h2 {
 }
 
 section.region-sidebar-first {
-	/* background-image:url('http://cmsassets.nau.edu/css/images/bar.png');
-		background-repeat:y-axis;
-	*/
-
+	/* background-image:url('http://cmsassets.nau.edu/css/images/bar.png');*/
+	background-repeat:y-axis;
+	/*padding-left: 40px;*/
+	color: #fff;
 }
+section.region-sidebar-first a {
+		color: #fff;
+}
+section.region-sidebar-first .vcard {
+	padding:18px;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+section.region-sidebar-first .vcard .organization-unit {
+	font-size: 1.4em;
+	line-height: 1em;
+}
+
+
 section.region-sidebar-first ul.menu a{
 	text-decoration: none;
-	font-size:.8em;
-}
+	font-family: Arial;
+	font-size:1.1em;
+	line-height: 16px;
+	text-transform: uppercase;
+	font-weight:bold;
 
+
+}
+section.region-sidebar-first ul.menu li {
+	padding: 3px;
+	/*list-style: none outside none;*/
+}
 section.region-sidebar-first ul.menu li a.active {
 	color:#E4CD51;
 }
@@ -157,11 +188,83 @@ section.region-sidebar-first ul.menu  li a {
 	color:white;
 }
 
+section.region-sidebar-first .block {
+	border-top: 1px #204C77 solid;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 230px;
+}
+
 #main {
 	padding-top:0;
+
+}
+
+#content {
+	margin-top:-72px;
 }
 
 #header {
 	padding-left:0;
 	padding-right:0;
+}
+
+nav.breadcrumb {
+	padding-bottom: 12px;
+
+}
+nav.breadcrumb a {
+	color:#888;
+}
+
+nav#secondary-menu {
+	margin:0px;
+}
+.nav-next {
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #031E3B;
+    border-bottom-left-radius: 5px;
+    border-color: #3972B3 -moz-use-text-color #3972B3 #3972B3;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-top-left-radius: 5px;
+    border-width: 1px medium 1px 1px;
+    display: block;
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    margin-bottom: 0;
+	margin-top:10px;
+    margin-left: 18px !important;
+    padding: 10px 10px 10px 14px !important;
+    width: 188px;
+
+}
+.nav-next ul {
+	padding:0;
+	margin:0;
+}
+.nav-next li {
+		list-style: none outside none;
+}
+.nav-next a {
+	color: #fff;
+	text-decoration:none;
+		text-transform: uppercase;
+	font-size: 16px;
+	font-weight:bold;
+}
+.nav-next a:hover {
+	color: #ccc;
+}
+
+ul li.collapsed {
+    list-style-image: url("http://idealab.nau.edu/css/images/whiteArrow.png");
+    list-style-type: disc;
+}
+ul li.expanded {
+    list-style-image: url("http://idealab.nau.edu/css/images/yellowArrowDown.png");
+    list-style-type: disc;
 }

@@ -18,7 +18,7 @@
    * this is the standards-compliant way to do that. */
   margin-left: auto;
   margin-right: auto;
-  width: 980px;
+  width: 1000px;
 }
 
 /*
@@ -72,7 +72,7 @@
   top: 0;
   /* Move the navbar up inside #main's padding. */
   height: 3em;
-  width: 960px;
+  width: 980px;
 }
 
 /*
@@ -82,16 +82,16 @@
 .sidebar-first #content {
   /* Span 4 columns, starting in 2nd column from left. */
   float: left;
-  width: 764px;
-  margin-left: 196px;
-  margin-right: -980px;
+  width: 784px;
+  margin-left: 216px;
+  margin-right: -1000px;
 }
 /* line 99, ../../sass/layouts/fixed-width.scss */
 .sidebar-first .region-sidebar-first {
   /* Span 1 column, starting in 1st column from left. */
   float: left;
   width: 176px;
-  margin-left: 0px;
+  margin-left: 20px;
   margin-right: -196px;
 }
 
@@ -102,17 +102,17 @@
 .sidebar-second #content {
   /* Span 4 columns, starting in 1st column from left. */
   float: left;
-  width: 764px;
-  margin-left: 0px;
-  margin-right: -784px;
+  width: 784px;
+  margin-left: 20px;
+  margin-right: -804px;
 }
 /* line 113, ../../sass/layouts/fixed-width.scss */
 .sidebar-second .region-sidebar-second {
   /* Span 1 column, starting in 5th column from left. */
   float: left;
   width: 176px;
-  margin-left: 784px;
-  margin-right: -980px;
+  margin-left: 804px;
+  margin-right: -1000px;
 }
 
 /*
@@ -122,23 +122,24 @@
 .two-sidebars #content {
   /* Span 3 columns, starting in 2nd column from left. */
   float: left;
-  width: 568px;
-  margin-left: 196px;
-  margin-right: -784px;
+  width: 500px;
+  margin-left: 230px;
+  margin-right: -790px;
+  padding-left:50px;
 }
 /* line 127, ../../sass/layouts/fixed-width.scss */
 .two-sidebars .region-sidebar-first {
   /* Span 1 column, starting in 1st column from left. */
   float: left;
-  width: 176px;
+  width: 200px;
   margin-left: 0px;
-  margin-right: -196px;
+  margin-right: -230px;
 }
 /* line 131, ../../sass/layouts/fixed-width.scss */
 .two-sidebars .region-sidebar-second {
   /* Span 1 column, starting in 5th column from left. */
   float: left;
-  width: 176px;
-  margin-left: 784px;
-  margin-right: -980px;
+  width: 200px;
+  margin-left: 790px;
+  margin-right: -1000px;
 }
