@@ -1,11 +1,16 @@
 @CHARSET "UTF-8";
 
+
 body {
 	background-color: #FDFAF5;
 	color: #3E3E3E;
-	font-size: .7em;
-	line-height: 1.4em;
+	font-size: 1em;
+
 }
+p {
+	line-height:1.3em;
+}
+
 a {
 	color: #2E2E2E;
 	cursor: pointer;
@@ -15,15 +20,28 @@ a:hover {
 	cursor: pointer;
 }
 
-h1, h2 {
+h2, h1{
 	color: #695F5E;
-    font-family: Georgia,"Times New Roman",Serif;
-    font-size: 22px;
+    font-family: Georgia,Serif;
     font-weight: bold;
-    line-height: 26px;
-    padding-top: 2px;
     text-transform: uppercase;
 }
+
+h1#page-title {
+	font-size: 1.7em;
+}
+
+
+.image-standard {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+/*Need this in here so that the admin edit/view tabs are not hidden by this div, was causing the tab to be non-clickable */
+#navigation {
+	margin-top:-28px;
+}
+
 
 #page-wrapper {
 	background-image:url('/sites/all/themes/nau/images/idealab-banner-ripple2.jpg');
@@ -35,7 +53,9 @@ h1, h2 {
 	background-repeat:repeat-y;
 }
 
-
+section.region-sidebar-second {
+	margin-top:-66px;
+}
 section.region-sidebar-second div.block {
 	margin-bottom:10px;
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -61,15 +81,19 @@ section.region-sidebar-second div.block h2 {
   text-transform: uppercase;
 }
 
-.breadcrumb ol {
+.breadcrumb  {
     font-size: 11px;
-}
-.breadcrumb li {
     /* background: url("http://nau.edu//css/images/greyArrow.png") no-repeat scroll 0 2px transparent;*/
     color: #B6B1B2;
-
     font-weight: bold;
     margin-right: 8px;
+	margin-bottom: 10px;
+}
+.breadcrumb  a{
+	 color: #969192;
+}
+.breadcrumb  a:hover{
+	 color: #666162;
 }
 
 #secondary-menu li {
@@ -152,6 +176,7 @@ section.region-sidebar-first {
 	background-repeat:y-axis;
 	/*padding-left: 40px;*/
 	color: #fff;
+	font-size: .8em;
 }
 section.region-sidebar-first a {
 		color: #fff;
@@ -170,15 +195,14 @@ section.region-sidebar-first .vcard .organization-unit {
 section.region-sidebar-first ul.menu a{
 	text-decoration: none;
 	font-family: Arial;
-	font-size:1.1em;
-	line-height: 16px;
+	font-size:1em;
 	text-transform: uppercase;
 	font-weight:bold;
 
 
 }
 section.region-sidebar-first ul.menu li {
-	padding: 3px;
+	padding: 0;
 	/*list-style: none outside none;*/
 }
 section.region-sidebar-first ul.menu li a.active {
@@ -202,6 +226,7 @@ section.region-sidebar-first .block {
 
 #content {
 	margin-top:-72px;
+	font-size: .8em;
 }
 
 #header {
@@ -216,6 +241,7 @@ nav.breadcrumb {
 nav.breadcrumb a {
 	color:#888;
 }
+
 
 nav#secondary-menu {
 	margin:0px;
@@ -253,7 +279,7 @@ nav#secondary-menu {
 	color: #fff;
 	text-decoration:none;
 		text-transform: uppercase;
-	font-size: 16px;
+	font-size: 1.2em;
 	font-weight:bold;
 }
 .nav-next a:hover {
@@ -268,3 +294,176 @@ ul li.expanded {
     list-style-image: url("http://idealab.nau.edu/css/images/yellowArrowDown.png");
     list-style-type: disc;
 }
+
+
+
+/* Recent News (Ideas) */
+.view-recent-news .views-row {
+	padding: 8px;
+	border: 1px #ddd solid;
+}
+
+/* FOOTER */
+
+footer#nauFooter {
+    clear: both;
+    height: 280px;
+    padding: 40px 0 0 272px;
+    position: relative;
+}
+
+#nauFooter {
+	position:relative;
+	display: block;
+	clear:both;
+	height:280px;
+	padding-left:272px;
+	vertical-align:baseilne;
+	line-height:12px;
+	color:#3e3e3e;
+	font-size:12px;
+	font-family: 'Lucida Sans', sans-serif;
+	font-weight:400;
+
+}
+
+#nauFooter nav {
+	width:150px;
+	bertical-align: baseline;
+	display:block;
+	float:left;
+}
+
+footer#nauFooter > a:first-child {
+    left: 42px;
+    position: absolute;
+    top: 42px;
+}
+footer#nauFooter figure#athletics {
+    color: #E4CD51;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+footer#nauFooter nav#communityFooter {
+    width: 150px;
+}
+footer#nauFooter nav#studentFooter {
+    width: 165px;
+}
+footer#nauFooter nav#campusFooter {
+    width: 170px;
+}
+footer#nauFooter nav#academicFooter {
+    margin-right: 0;
+    width: 190px;
+}
+footer#nauFooter nav {
+    float: left;
+    margin-right: 10px;
+}
+footer#nauFooter h5 {
+    color: #619081;
+    float: left;
+    font-family: Georgia,"Times New Roman",Serif;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 4px 0;
+    text-align: right;
+    text-transform: uppercase;
+	margin:0;
+}
+
+footer#nauFooter a#footerAlert {
+    clear: both;
+    position: relative;
+    top: 3px;
+}
+footer#nauFooter a#footerAlert, footer#nauFooter a#footerSocial {
+    display: block !important;
+    float: left;
+    font-weight: bold;
+    margin: 20px 0 30px;
+    text-decoration: underline;
+    width: 250px;
+}
+
+footer#nauFooter a#footerAlert, footer#nauFooter a#footerSocial {
+    display: block !important;
+    float: left;
+    font-weight: bold;
+    margin: 20px 0 30px;
+    text-decoration: underline;
+    width: 250px;
+}
+footer#nauFooter span#copyright {
+    clear: both;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+footer#nauFooter ul {
+    clear: both;
+	margin:0;
+	padding:0;
+}
+
+footer#nauFooter ul li {
+    cursor: pointer;
+    font-size: 10px;
+    padding: 2px 0 3px;
+}
+
+body.imageBanner div#bannerVisual {
+    background: none repeat scroll 0 0 #000000;
+    height: 100px;
+}
+div#bannerVisual {
+    background: none repeat scroll 0 0 #003466;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: -10;
+}
+
+/* my own helper for the footer background */
+#nauFooterBG{
+    background: -moz-linear-gradient(center top , #F2F2F2 0%, #D3D3D3 100%) repeat scroll 0 0 #EFEFEF;
+    border-top: 1px solid #03254C;
+   /* bottom: 0;*/
+    height: 300px;
+    /*position: absolute;*/
+    width: 100%;
+    z-index: -1000;
+	margin-top: -300px;
+	padding-bottom:10px;
+}
+
+/* homepage slider effects */
+div.views-slideshow-controls-bottom  {
+	padding-left:412px;
+}
+div.views-slideshow-controls-bottom  .views-content-counter {
+	border: 1px solid #999;
+	color: #666;
+    width: 16px;
+	height: 10px;
+	cursor:pointer;
+	padding: 0px 0px;
+	float: left;
+	margin-left: 6px;
+	font-size: 1px;
+}
+div.views-slideshow-controls-bottom div.active .views-content-counter {
+	background-color:#6A605F;
+
+}
+div.view-homepage-slideshow img {
+	border: 1px #666 solid;
+}
+
