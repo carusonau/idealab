@@ -72,44 +72,48 @@
 
 <div id="page">
 
-   	<div id='naulogo' style="float:left; position:absolute; padding-left:6px;">
-       <a href="http://nau.edu/">
-		<img alt="NAU Logo" src="http://news.nau.edu/wp-content/themes/nau_development/images/logo.png">
-		</a>
-   	</div>
-  	<header id="nauHeader" role="banner">
-	    <!-- Pull in aggregator css DO NOT CHANGE -->
-	  	<link rel="stylesheet" type="text/css" href="http://cmsassets.nau.edu/aggregator/css.ashx?page_type=standard" />
-		<!-- Pull in aggregator javascript DO NOT CHANGE -->
-		<script type="text/javascript" src="http://cmsassets.nau.edu/aggregator/js.ashx?page_type=standard"></script>
-	    <?php
-	    //echo file_get_contents('http://idealab.nau.edu/includes/scripts_standard.aspx');
-	    echo file_get_contents('http://cmsassets.nau.edu/aggregator/nav.ashx?location=header');
-	    ?>
-	    <form id="nauSearch" action="http://nau.edu/searchproxy.ashx" role="search">
-	    <div id="searchOptions">
-	    <label for="entireInput">Entire Site</label>
-	    <input id="entireInput" type="radio" name="searchType" value="entireSite" checked="checked">
+  <header id="header" role="banner">
 
-	    <label for="directoryInput">Directory</label>
-	    <input id="directoryInput" type="radio" name="searchType" value="directory">
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+    <?php endif; ?>
 
-	    <label for="degreesInput">Degrees</label>
-	    <input id="degreesInput" type="radio" name="searchType" value="degrees">
-	    </div>
-	    <!--[if IE]>
-	    <input type="text" style="display: none;" disabled="disabled" size="1" />
-	    <![endif]-->
-	    <input name="q" type="text" id="query" class="nauSearchInput" placeholder="Enter search term..." title="Enter search term">
-	    		<input type="submit" name="search" value="" class="nauSubmit">
-		</form>
+    <?php if ($secondary_menu): ?>
+      <nav id="secondary-menu" role="navigation">
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => $secondary_menu_heading,
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+      </nav>
+    <?php endif; ?>
+
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup id="name-and-slogan">
+        <?php if ($site_name): ?>
+          <h1 id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+          </h1>
+        <?php endif; ?>
+
+        <?php if ($site_slogan): ?>
+          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+        <?php endif; ?>
+      </hgroup><!-- /#name-and-slogan -->
+    <?php endif; ?>
+
+
+    <?php print render($page['header']); ?>
 
   </header>
 
-
-
-
-  <div id="main" style="clear:both; padding-top: 150px;">
+  <div id="main">
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
