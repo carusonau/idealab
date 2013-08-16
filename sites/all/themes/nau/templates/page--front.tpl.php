@@ -3,51 +3,44 @@
 ?>
 
 <div id="page">
-  <header id="header" role="banner">
+   	<div id='naulogo' style="float:left; position:absolute; padding-left:8px;">
+       <a href="http://nau.edu/">
+		<img alt="NAU Logo" src="/sites/all/themes/nau/images/logo/nau.png">
+		</a>
+   	</div>
+  	<header id="nauHeader" role="banner">
+	    <!-- Pull in aggregator css DO NOT CHANGE -->
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-    <?php endif; ?>
-
-
-
-    <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </nav>
-    <?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
-      <hgroup id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-      </hgroup><!-- /#name-and-slogan -->
-    <?php endif; ?>
+		<!-- Pull in aggregator javascript DO NOT CHANGE -->
 
 
-    <?php print render($page['header']); ?>
+	    <?php
+	    //echo file_get_contents('http://idealab.nau.edu/includes/scripts_standard.aspx');
+	    echo file_get_contents('http://cmsassets.nau.edu/aggregator/nav.ashx?location=header');
+	    ?>
+	    <form id="nauSearch" action="http://nau.edu/searchproxy.ashx" role="search">
+	    <div id="searchOptions">
+	    <label for="entireInput">Entire Site</label>
+	    <input id="entireInput" type="radio" name="searchType" value="entireSite" checked="checked">
 
+	    <label for="directoryInput">Directory</label>
+	    <input id="directoryInput" type="radio" name="searchType" value="directory">
+
+	    <label for="degreesInput">Degrees</label>
+	    <input id="degreesInput" type="radio" name="searchType" value="degrees">
+	    </div>
+	    <!--[if IE]>
+	    <input type="text" style="display: none;" disabled="disabled" size="1" />
+	    <![endif]-->
+	    <input name="q" type="text" id="query" class="nauSearchInput" placeholder="Enter search term..." title="Enter search term">
+	    		<input type="submit" name="search" value="" class="nauSubmit">
+		</form>
+		<div id="idealab-title">
+			IDEA LAB
+		</div>
   </header>
 
-
-  <div id="main">
+<div id="main" style="clear:both; padding-top: 150px;">
 
     <div id="content" class="column" role="main">
 	<div style="padding:3px 0 4px 0;"></div>
@@ -58,7 +51,6 @@
 		$view = views_embed_view('homepage_slideshow', 'block', null);
 		print $view;
 	?>
-
 <!--
     <img src="/sites/all/themes/nau/images/tmp/idealab.png" style="padding-top:4px;">-->
       <?php print render($page['highlighted']); ?>
@@ -67,34 +59,34 @@
       <?php print render($title_prefix); ?>
 
 
-        <h1 class="title" id="page-title">IDEA Lab</h1>
-        <div>(Formerly Bilby Research Center)</div>
-		<p style="font-weight:bold; color:#003366">Imaging, Design, Editing, and Administrative Support</p>
+        <h1 class="title" id="page-title" style="float:left;">IDEA Lab</h1>
+        <div style="padding: 29px 0 0 10px; float:left;" >(Formerly Bilby Research Center)</div>
+		<p style="font-weight:bold; color:#003366; clear:both;">Imaging, Design, Editing, and Administrative Support</p>
 		<p>IDEA Lab is a centralized university research support service. We invite research projects from all university departments and colleges.</p>
 		<div>
-		  <a href="/imaging" style="text-decoration:none;">
+		  <a href="/imaging" style="text-decoration:none; ">
 		     <img width="90" height="90" alt="original images" src="/sites/all/themes/nau/images/tmp/block-I.png" style="float:left;">
-		     <h3 style="padding: 30px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">IMAGING</h3>
+		     <h3 style="padding: 40px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">IMAGING</h3>
 		  </a>
 		</div>
 		<div>
 		  <a href="/design" style="text-decoration:none;">
 
 		     <img width="90" height="90" alt="imaging services" src="/sites/all/themes/nau/images/tmp//block-D.png" style="float:left;">
-		     <h3 style="padding: 30px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">DESIGN</h3>
+		     <h3 style="padding: 40px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">DESIGN</h3>
 		      </a>
 		</div>
 		<div>
 		  <a href="/editing" style="text-decoration:none;">
 
 		      <img width="90" height="90" alt="multispectral imaging" src="/sites/all/themes/nau/images/tmp//block-E.png" style="float:left;">
-		       <h3 style="padding: 30px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">EDITING</h3>
+		       <h3 style="padding: 40px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">EDITING</h3>
 		      </a>
 		</div>
 		<div>
 		  <a href="/administrative-support" style="text-decoration:none;">
 		     <img width="90" height="90" alt="images as data" src="/sites/all/themes/nau/images/tmp//block-A.png" style="float:left;">
-		     <h3 style="padding: 30px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">ADMINISTRATIVE SUPPORT</h3>
+		     <h3 style="padding: 40px 100px; color:#619281; font-family: Arial; font-size:18px; letter-spacing:2px; ">ADMINISTRATIVE SUPPORT</h3>
 		  </a>
 		</div>
 

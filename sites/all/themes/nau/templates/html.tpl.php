@@ -78,16 +78,19 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-
-  <?php if ($default_mobile_metatags): ?>
+   <?php if ($default_mobile_metatags): ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
 
-  <?php print $styles; ?>
+  <!--  pulled this to top as it was interfering with drupal javascript (slide show on homepage) -->
+  <script type="text/javascript" src="http://cmsassets.nau.edu/aggregator/js.ashx?page_type=standard"></script>
 
+
+  <?php print $styles; ?>
+	<link rel="stylesheet" type="text/css" href="http://cmsassets.nau.edu/aggregator/css.ashx?page_type=standard" />
    <link type="text/css" href="/sites/all/themes/nau/css/nau.css" rel="Stylesheet" />
 
   <?php print $scripts; ?>

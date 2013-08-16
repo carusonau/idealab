@@ -4,11 +4,12 @@
 body {
 	background-color: #FDFAF5;
 	color: #3E3E3E;
-	font-size: 1em;
+	font-size: 1em !important;
 
 }
 p {
-	line-height:1.3em;
+	line-height:1.5em !important;
+	font-size: 1em  !important;
 }
 
 a {
@@ -25,10 +26,32 @@ h2, h1{
     font-family: Georgia,Serif;
     font-weight: bold;
     text-transform: uppercase;
+
+}
+
+h4 {
+	font-size: 1.3em;
+}
+
+#content p{
+	/*margin-top: 1em !important;*/
+	margin-bottom: 1em !important;
+ }
+
+#idealab-title {
+	color: #fff;
+	font-size: 25px;
+	font-weight: bold;
+	position:absolute;
+	left:280px;
+	top:87px;
 }
 
 h1#page-title {
+	font-family: Georgia,Serif;
 	font-size: 1.7em;
+	margin-bottom: 16px;
+	margin-top: 24px
 }
 
 
@@ -113,6 +136,7 @@ section.region-sidebar-second div.block h2 {
 }
 
 
+
 #nauSearch {
   bottom: 0;
   color: #FFFFFF;
@@ -124,15 +148,18 @@ section.region-sidebar-second div.block h2 {
 	width:600px;
 }
 #nauSearch #searchOptions {
-	margin-top: 15px;
+	margin-top: 12px !important;
   	height: 45px;
   	margin-right: 15px;
-  	padding-top: 17px;
+  	padding-top: 0px !important;
 	/*border: 1px #333 dashed;*/
 	float:right;
 }
 #nauSearch #searchOptions input{
 	float:right;
+	margin-top: -1px;
+	margin-right: 4px;
+	margin-left: 6px;
 
 }
 #nauSearch #searchOptions label{
@@ -171,46 +198,115 @@ section.region-sidebar-second div.block h2 {
 	color: #fff !important;
 }
 
+/* Left Sidebar */
+/* -------------------------------------------------------------------------*/
 section.region-sidebar-first {
 	/* background-image:url('http://cmsassets.nau.edu/css/images/bar.png');*/
 	background-repeat:y-axis;
 	/*padding-left: 40px;*/
 	color: #fff;
-	font-size: .8em;
+	font-size: 1em;
+	margin-top: 30px;
 }
 section.region-sidebar-first a {
 		color: #fff;
 }
 section.region-sidebar-first .vcard {
 	padding:18px;
-	font-size: 1.1em;
+
 	line-height: 1.4em;
 }
+section.region-sidebar-first .vcard p {
+	font-size: .85em !important;
+}
+
 section.region-sidebar-first .vcard .organization-unit {
 	font-size: 1.4em;
 	line-height: 1em;
+
+}
+section.region-sidebar-first .vcard div.org {
+	padding-bottom: 8px;
 }
 
+section.region-sidebar-first .vcard a{
+	text-decoration: underline;
+	padding-bottom: 3px;
+}
+section.region-sidebar-first .vcard a:hover {
+	color: #999;
+}
+
+/* Sidebar Menu */
+/* -------------------------------------------------------------------------*/
+
+/* override nau menu css  for our side menu */
+
+section.region-sidebar-first menu, section.region-sidebar-first ol, section.region-sidebar-first ul, section.region-sidebar-first .item-list ul {
+    padding: 0 0 0 10px !important;
+}
+section.region-sidebar-first dl, section.region-sidebar-first menu, section.region-sidebar-first ol, section.region-sidebar-first ul, section.region-sidebar-first .item-list ul {
+    margin: .8em 0 ;
+}
+section.region-sidebar-first div#block-system-main-menu {
+	padding:0 0 0 25px !important;
+}
 
 section.region-sidebar-first ul.menu a{
 	text-decoration: none;
 	font-family: Arial;
-	font-size:1em;
-	text-transform: uppercase;
+	font-size: .75em !important;
+
 	font-weight:bold;
 
 
 }
 section.region-sidebar-first ul.menu li {
-	padding: 0;
+	padding: 0 ;
+	margin: .5em .2em;
 	/*list-style: none outside none;*/
 }
 section.region-sidebar-first ul.menu li a.active {
 	color:#E4CD51;
 }
+section.region-sidebar-first ul.menu li a.active-trail {
+	color:#E4CD51;
+}
 section.region-sidebar-first ul.menu  li a {
 	color:white;
 }
+
+section.region-sidebar-first ul.menu li {
+    list-style-image: url("http://idealab.nau.edu/css/images/whiteArrow.png");
+    list-style-type: disc;
+	text-transform: uppercase;
+}
+section.region-sidebar-first ul.menu li.active-trail{
+    list-style-image: url("http://idealab.nau.edu/css/images/yellowArrow.png");
+
+}
+section.region-sidebar-first ul.menu li.collapsed {
+    list-style-image: url("http://idealab.nau.edu/css/images/whiteArrow.png");
+    list-style-type: disc;
+}
+section.region-sidebar-first ul.menu li.expanded {
+
+    list-style-image: url("http://idealab.nau.edu/css/images/yellowArrowDown.png");
+    list-style-type: disc;
+}
+/* inner sub-menu items */
+section.region-sidebar-first ul.menu li.expanded li {
+    list-style-image: none;
+    list-style-type: none;
+	text-transform:none;
+
+}
+section.region-sidebar-first ul.menu li.expanded ul.menu{
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
 
 section.region-sidebar-first .block {
 	border-top: 1px #204C77 solid;
@@ -218,6 +314,12 @@ section.region-sidebar-first .block {
 	padding-bottom: 8px;
 	width: 230px;
 }
+section.region-sidebar-first #block-system-main-menu {
+	border-top: 1px #204C77 solid;  /* this top menu block has its border strching over the navbar edge so make smaller */
+	width: 206px;
+
+}
+
 
 #main {
 	padding-top:0;
@@ -262,9 +364,9 @@ nav#secondary-menu {
     font-family: arial,sans-serif;
     font-size: 12px;
     margin-bottom: 0;
-	margin-top:10px;
+	margin-top:20px;
     margin-left: 18px !important;
-    padding: 10px 10px 10px 14px !important;
+    padding: 2px 20px 2px 4px !important;
     width: 188px;
 
 }
@@ -278,7 +380,7 @@ nav#secondary-menu {
 .nav-next a {
 	color: #fff;
 	text-decoration:none;
-		text-transform: uppercase;
+	text-transform: uppercase;
 	font-size: 1.2em;
 	font-weight:bold;
 }
@@ -286,6 +388,7 @@ nav#secondary-menu {
 	color: #ccc;
 }
 
+/*
 ul li.collapsed {
     list-style-image: url("http://idealab.nau.edu/css/images/whiteArrow.png");
     list-style-type: disc;
@@ -294,7 +397,7 @@ ul li.expanded {
     list-style-image: url("http://idealab.nau.edu/css/images/yellowArrowDown.png");
     list-style-type: disc;
 }
-
+*/
 
 
 /* Recent News (Ideas) */
@@ -446,7 +549,7 @@ div#bannerVisual {
 
 /* homepage slider effects */
 div.views-slideshow-controls-bottom  {
-	padding-left:412px;
+	padding-left:390px;
 }
 div.views-slideshow-controls-bottom  .views-content-counter {
 	border: 1px solid #999;
@@ -467,3 +570,18 @@ div.view-homepage-slideshow img {
 	border: 1px #666 solid;
 }
 
+/* temp class to hold nice bullet lists in webdesign services and editing pages*/
+ul#bullet-list, ul#bullet-list li{
+	list-style: disk !important;
+	margin: 4px;
+}
+
+.policy_notes {
+    color: #557565;
+    font-size: 11px;
+}
+
+/* photograph node */
+.node-photograph .field-name-field-image img {
+	border: 1px #333 solid;
+}

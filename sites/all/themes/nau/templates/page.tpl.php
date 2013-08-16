@@ -72,17 +72,16 @@
 
 <div id="page">
 
-   	<div id='naulogo' style="float:left; position:absolute; padding-left:6px;">
+   	<div id='naulogo' style="float:left; position:absolute; padding-left:8px;">
        <a href="http://nau.edu/">
-		<img alt="NAU Logo" src="http://news.nau.edu/wp-content/themes/nau_development/images/logo.png">
+		<img alt="NAU Logo" src="/sites/all/themes/nau/images/logo/nau.png">
 		</a>
    	</div>
   	<header id="nauHeader" role="banner">
 	    <!-- Pull in aggregator css DO NOT CHANGE -->
-	  	<link rel="stylesheet" type="text/css" href="http://cmsassets.nau.edu/aggregator/css.ashx?page_type=standard" />
+
 		<!-- Pull in aggregator javascript DO NOT CHANGE -->
-		<script type="text/javascript" src="http://cmsassets.nau.edu/aggregator/js.ashx?page_type=standard"></script>
-	    <?php
+		 <?php
 	    //echo file_get_contents('http://idealab.nau.edu/includes/scripts_standard.aspx');
 	    echo file_get_contents('http://cmsassets.nau.edu/aggregator/nav.ashx?location=header');
 	    ?>
@@ -103,7 +102,9 @@
 	    <input name="q" type="text" id="query" class="nauSearchInput" placeholder="Enter search term..." title="Enter search term">
 	    		<input type="submit" name="search" value="" class="nauSubmit">
 		</form>
-
+		<div id="idealab-title">
+			IDEA LAB
+		</div>
   </header>
 
 
