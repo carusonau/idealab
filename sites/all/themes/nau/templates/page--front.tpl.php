@@ -59,9 +59,6 @@
       <?php print render($title_prefix); ?>
 
 
-        <h1 class="title" id="page-title" style="float:left;">IDEA Lab</h1>
-        <div style="padding: 29px 0 0 10px; float:left;" >(Formerly Bilby Research Center)</div>
-		<p style="font-weight:bold; color:#003366; clear:both;">Imaging, Design, Editing, and Administrative Support</p>
 		<p>IDEA Lab is a centralized university research support service. We invite research projects from all university departments and colleges.</p>
 		<div>
 		  <a href="/imaging" style="text-decoration:none; ">
